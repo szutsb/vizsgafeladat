@@ -1,0 +1,18 @@
+<div><h2>Hírek</h2></div>
+    <div class="container news-content">            
+        <div class="row">                
+            <div class="col-md-8 offset-md-2 my-auto news-list">
+                
+                <ul id="headlines" *ngIf="newsItem; else noNews">
+                    <li class="pb-5" *ngFor="let news of newsItem">
+                        <a routerLink='/news/{{news.id}}' class="newslink"><h3>{{ news.title }}</h3>
+                            <p>{{ news.text }}</p>
+                        </a>
+                    </li>
+                </ul>
+                <ng-template #noNews>
+                    <h3>Jelenleg nincsenek híreink</h3> 
+                </ng-template>
+            </div>
+        </div>
+    </div>

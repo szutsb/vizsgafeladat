@@ -1,0 +1,51 @@
+.btn-home {
+    margin: 10px auto 10px auto;
+    background-color: #800020;
+    color: #FFFF;
+    border-radius: 50px;
+}
+
+.btn-add {
+    margin: 10px auto 10px auto;
+    background-color: #008060;
+    color: #FFFF;
+    border-radius: 50px;
+}
+
+.btn-add:link,
+.btn-add:visited {
+    background-color: #008060;
+    border: 1px solid #008060;
+    text-decoration: none;
+}
+
+.btn-add:hover,
+.btn-add:active {
+    background-color: #608078;
+    border: 1px solid #608078;
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+}
+
+.btn-home:link,
+.btn-home:visited {
+    background-color: #800020;
+    border: 1px solid #800020;
+    text-decoration: none;
+}
+
+.btn-home:hover,
+.btn-home:active {
+    background-color: #806068;
+    border: 1px solid #806068;
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+}
+
+input.ng-invalid.ng-touched,
+textarea.ng-invalid.ng-touched,
+select.ng-invalid.ng-touched {
+    border: 1px solid red;
+}

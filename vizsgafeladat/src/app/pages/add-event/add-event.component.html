@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <h2>Program hozzáadása</h2>
+    </div>
+    <div class="row">
+        <form [formGroup]= "addForm" (ngSubmit)="addEvent()">
+            <div class="form-group">
+                <label for="date">Dátum:</label>
+                <input type="date" formControlName="date">
+                <div class="alert  alert-danger" *ngIf="addForm.get('date').hasError('required') && addForm.get('date').touched">  
+                    Kérjük töltse ki a dátum mezőt  
+                </div>  
+            </div>
+            <div class="form-group">
+                <label for="time">Időpont:</label>
+                <input type="time" formControlName="time">
+                <div class="alert  alert-danger" *ngIf="addForm.get('time').hasError('required') && addForm.get('time').touched">  
+                    Kérjük töltse ki az időpont mezőt  
+                </div>     
+            </div>
+            <div class="form-group">
+                <label for="location">Helyszín:</label>
+                <input type="text" formControlName="location">
+                <div class="alert  alert-danger" *ngIf="addForm.get('location').hasError('required') && addForm.get('location').touched">  
+                    Kérjük adja meg a program helyszínét  
+                </div>     
+            </div>
+            <div class="form-group">
+                <label for="text">Leírás:</label>
+                <input type="text" formControlName="text">
+                <div class="alert  alert-danger" *ngIf="addForm.get('text').hasError('required') && addForm.get('text').touched">  
+                    Kérjük adja meg a program leírását (max 80 karakterben)  
+                </div>     
+            </div>
+            <button class="btn btn-dark btn-block w-50 mx-auto" type="submit">Küldés</button>
+        </form>
+    </div>
+</div>
+
+

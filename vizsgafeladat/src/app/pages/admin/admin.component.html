@@ -1,0 +1,84 @@
+<div id="admin" class="container-fluid">   
+    <ul *ngFor="let event of event" [@list]>
+        <li class="d-flex justify-content-between"><img src="{{event.imageURL}}" style="height: 50px;">{{event.eventType | uppercase}} program: {{event.date}} {{event.time}} {{event.location}} {{event.text}}
+            <button class="btn btn-delete ml-auto" mwlConfirmationPopover [popoverMessage]="popoverMessage" [confirmText]="confirmText" [cancelText]="cancelText" placement="left" (confirm)="deleteEvent(event.id)" (cancel)="cancelClicked = true"   confirmButtonType="danger" cancelButtonType="info" [appendToBody]="true">Törlés</button>
+            <button class="btn btn-edit ml-1"  routerLink="/edit-event/{{event.id}}">Módosítás</button> 
+        </li>
+        <hr>
+    </ul>
+    <a class="btn btn-add btn-block w-50 mx-auto" data-toggle="modal" data-target="#modaladd">Program hozzáadása</a>
+    <div class="col-md-12 text-center">
+        <div class="btn-group btn-block w-50">
+            <a class="btn btn-home" (click)="logout()">Kilépés</a> 
+            <a class="btn btn-add" (click)="home()">Főoldal</a> 
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modaladd">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Program hozzáadása</h3>
+                <button class="close" type="button" data-dismiss="modal">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                <form [formGroup]= "addForm" novalidate (ngSubmit)="addEvent()">
+                    <select formControlName="eventType" (change)="changeType($event)" class="custom-select">
+                        <option>könyves</option>
+                        <option>filmes</option>
+                        <option>gamer</option>
+                        <!-- <option *ngFor="let type of Type" [ngValue]="type">{{type}}</option> -->
+                    </select>
+                    <span class="text-danger small" *ngIf="addForm.get('eventType').hasError('required') && addForm.get('eventType').touched">  
+                        Kérjük válassza ki a program típusát  
+                    </span>
+                    <div class="form-group">
+                        <label for="imageURL">Kép elérési útvonala:</label>
+                        <input type="text" class="form-control" formControlName="imageURL" #imageURL>
+                    </div>
+                    <div class="row">
+                        <img [src]="imageURL.value" class="img-fluid">
+                    </div>                    
+                    <div class="form-group">
+                        <label for="date">Dátum:</label>
+                        <input type="date" class="form-control" formControlName="date">
+                        <span class="text-danger small" *ngIf="addForm.get('date').hasError('required') && addForm.get('date').touched">  
+                            Kérjük töltse ki a dátum mezőt  
+                        </span>  
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Időpont:</label>
+                        <input type="time" class="form-control" formControlName="time">
+                        <span class="text-danger small" *ngIf="addForm.get('time').hasError('required') && addForm.get('time').touched">  
+                            Kérjük töltse ki az időpont mezőt  
+                        </span>     
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Helyszín:</label>
+                        <input type="text" placeholder="Helyszín" class="form-control" formControlName="location">
+                        <span class="text-danger small" *ngIf="addForm.get('location').hasError('required') && addForm.get('location').touched">  
+                            Kérjük adja meg a program helyszínét  
+                        </span>     
+                    </div>
+                    <div class="form-group">
+                        <label for="text">Leírás:</label>
+                        <textarea placeholder="Leírás (max. 180 karakter)" class="form-control" formControlName="text" rows="4"></textarea>
+                        <span class="text-danger small" *ngIf="addForm.get('text').hasError('required') && addForm.get('text').touched">  
+                            Kérjük adja meg a program leírását
+                        </span>
+                        <span class="text-danger small" *ngIf="addForm.get('text').hasError('maxlength') && addForm.get('text').touched">  
+                            Kérjük legfeljebb 180 karaktert használjon
+                        </span>
+                    </div>
+                    <div class="form-group">
+                        <label for="eventURL">Link a programhoz</label>
+                        <input type="text" placeholder="Program URL" class="form-control" formControlName="eventURL">
+                    </div>
+                    <button class="btn btn-add btn-block w-50 mx-auto" [disabled]='addForm.invalid' type="submit" onclick="$('.modal').modal('hide')">Küldés</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

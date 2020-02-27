@@ -1,0 +1,18 @@
+#headlines {
+    padding-top: 40px;
+    list-style-type: none;
+    margin: auto;
+}
+
+#headlines h3 {
+    text-align: center;
+}
+
+#headlines p {
+    text-align: justify;
+}
+
+.newslink, .newslink:hover {
+    color: #FFFF;
+    text-decoration: none;
+}

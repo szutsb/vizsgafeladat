@@ -1,0 +1,63 @@
+{
+  "event": [
+    {
+      "id": 3,
+      "eventType": "filmes",
+      "imageURL": "http://localhost:4200/assets/images/cinema.jpg",
+      "date": "2020-02-24",
+      "time": "19:00",
+      "location": "Pécs, Uránia",
+      "text": "Az Oscar-díjas .... c. film vetítése",
+      "eventURL": "https://pecsimozi.hu/"
+    },
+    {
+      "id": 4,
+      "eventType": "könyves",
+      "imageURL": "http://localhost:4200/assets/images/book.jpg",
+      "date": "2020-03-01",
+      "time": "17:45",
+      "location": "Pécs, Művészetek háza",
+      "text": "X. Y. új verseskötetének bemutatója, dedikálás",
+      "eventURL": "https://www.pmh.hu/"
+    },
+    {
+      "id": 7,
+      "eventType": "gamer",
+      "imageURL": "http://localhost:4200/assets/images/gaming.jpeg",
+      "date": "2020-03-02",
+      "time": "17:00",
+      "location": "Pécs",
+      "text": "FIFA bajnokság\nJegyek elővételben kaphatók",
+      "eventURL": "http://www.ticketportal.hu"
+    }
+  ],
+  "news-item": [
+    {
+      "id": 1,
+      "title": "Új köntösben érkezik a Vaják",
+      "text": "Mindenki kedvenc szörnyvadászának történetei új kiadásban jelennek meg a Gabo kiadó gondozásában, hamarosan érkezik a második kötet.",
+      "imageURL": "http://localhost:4200/assets/images/news1.jpeg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam aut minus nobis quibusdam atque nihil id, excepturi corporis ab possimus, dicta esse vel aspernatur earum corrupti, unde sapiente laudantium. Sunt? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum facilis impedit repellendus voluptate hic voluptatibus cupiditate architecto quo? Rerum odit reprehenderit iusto? Suscipit, maiores explicabo ipsa alias dignissimos molestiae mollitia.",
+      "link": "https://www.gabo.hu/hu/content/13-cimlap?p=a-vajak-konyvek-varhato-megjelenese",
+      "linkText": "gabo.hu"
+    },
+    {
+      "id": 2,
+      "title": "Sorozat készült a népszerű regényből",
+      "text": "Tonke Dragt regényét Hollandiában 2004-ben az elmúlt 50 év legjobb ifjúsági könyvének választották, még idén bemutatják a belőle készült sorozatot.",
+      "imageURL": "http://localhost:4200/assets/images/news2.jpeg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam aut minus nobis quibusdam atque nihil id, excepturi corporis ab possimus, dicta esse vel aspernatur earum corrupti, unde sapiente laudantium. Sunt? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum facilis impedit repellendus voluptate hic voluptatibus cupiditate architecto quo? Rerum odit reprehenderit iusto? Suscipit, maiores explicabo ipsa alias dignissimos molestiae mollitia.",
+      "link": "https://www.youtube.com/watch?v=0a59EkFnXg4",
+      "linkText": "youtube.com"
+    },
+    {
+      "id": 3,
+      "title": "Itt vannak az új Xbox specifikációi!",
+      "text": "Visszafelé kompatibilitás, 120 fps, stb: végre hivatalosan közzétették az új konzol részleteit",
+      "imageURL": "http://localhost:4200/assets/images/news3.jpeg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam aut minus nobis quibusdam atque nihil id, excepturi corporis ab possimus, dicta esse vel aspernatur earum corrupti, unde sapiente laudantium. Sunt? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum facilis impedit repellendus voluptate hic voluptatibus cupiditate architecto quo? Rerum odit reprehenderit iusto? Suscipit, maiores explicabo ipsa alias dignissimos molestiae mollitia.",
+      "link": "https://news.xbox.com/en-us/2020/02/24/what-you-can-expect-next-generation-gaming/",
+      "linkText": "news.xbox.com"
+    }
+  ]
+}

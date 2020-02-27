@@ -1,0 +1,41 @@
+#login {
+    height: 100vh;
+}
+
+.card-header {
+    background-image: linear-gradient( #800020 0%, #806068 100%);
+    color: #FFFF;
+}
+
+.btn-login {
+    background-color: #008060;
+    color: #FFFF;
+    border-radius: 50px;
+}
+
+.btn-login:hover,
+.btn-login:active,
+.btn-login:focus {
+    background-color: #608078;
+    outline: none;
+    box-shadow: none;
+}
+
+.btn-back {
+    background-color: #800020;
+    color: #FFFF;
+    border-radius: 50px;
+}
+
+.btn-back:hover,
+.btn-back:active,
+.btn-back:focus {
+    background-color: #806068;
+    outline: none;
+    box-shadow: none;
+}
+
+
+
+
+

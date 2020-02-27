@@ -1,0 +1,187 @@
+/***************
+* NAV + HEADER *
+************** */
+
+.navbar {
+    background-image:linear-gradient(140deg, #800020 0%, #806068 100%);
+    font-size: 1.5rem;
+}
+
+.navbar-toggler:focus, .navbar-toggler:active {
+    outline: none;
+    box-shadow: none;
+}
+
+.nav-item :hover {
+    border-left: 3px solid #008060;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.nav-item :active {
+    background-color: #008060;
+    transition: .5s;
+}
+
+.nav-item.active {
+    color: #FFFF;
+}
+
+#text {
+    animation: bounceIn 2s;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.3);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+.carousel-inner img {
+    height: 100vh;
+    width: 100vw;
+}
+
+.carousel-indicators li {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    margin: 20px;
+}
+
+.carousel-caption {
+    background-color: rgba(128, 0, 32, 0.4);
+    font-size: 1.25rem;
+    border-radius: 8px;
+}
+
+.carousel-caption a, .carousel-caption a:hover {
+    color: #FFFF;
+    text-decoration: none;
+}
+
+.adminbtn {
+    display: inline-block;
+    background-color: #F0BE82;
+    border-radius: 50px;
+    font-size:80%;
+    color: #FFFF;
+    padding: 5px 10px;
+}
+
+.adminbtn:link,
+.adminbtn:visited {
+    background-color: #F0BE82;
+    border: 1px solid #F0BE82;
+    margin-right: 15px;
+}
+
+.adminbtn:hover,
+.adminbtn:active {
+    background-color: #B48F62;
+    border: 1px solid #B48F62;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 625px) {
+    .navbar {
+        font-size: 95% !important;
+    }
+}
+
+/***************
+*   FOOTER     *
+************** */
+
+.social {
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 80px;
+}
+
+a.social:hover {
+    text-decoration: none;
+}
+
+.icon-social {
+    display: inline-block;
+    font-size: 160%;
+    color: #008060;
+}
+
+.icon-social:hover {
+    transform: scale(1.5);
+    transition: all .2s ease-in-out;
+}
+
+.footer-copyright {
+    font-size: 75%;
+    position: absolute;
+    z-index: 10;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    color: #FFFF;    
+}
+
+svg {
+    background-color: #CCCC;
+    position: relative;
+    z-index: 1;
+}
+
+@media screen and (max-width: 991px) {
+    .social {
+        bottom: 60px !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .social {
+        bottom: 30px !important;
+    }
+    .footer-copyright {
+        bottom: 15px !important;
+        font-size: 70% !important;
+    }
+}
+
+@media screen and (max-width: 610px) {
+    .social {
+        font-size: 90% !important;
+    }
+    .footer-copyright {
+        font-size: 65% !important;
+    }
+}
+
+@media screen and (max-width: 574px) {
+    .social {
+        font-size: 80% !important;
+    }
+    .footer-copyright {
+        font-size: 60% !important;
+        bottom: 10px !important;
+    }
+}
+@media screen and (max-width: 524px) {
+    .social {
+        font-size: 75% !important;
+    }
+    .footer-copyright {
+        font-size: 55% !important;
+        bottom: 5px !important;
+    }
+}
+

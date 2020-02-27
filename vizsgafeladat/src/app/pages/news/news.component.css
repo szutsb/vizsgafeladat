@@ -1,0 +1,9 @@
+#news {
+    text-align: center;
+    background-image: linear-gradient( rgba(0,0,0,0.5),rgba(0,0,0,0.7) ),url("../../../assets/images/news_hatter.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #FFFF;
+    min-height: 100vh;
+}

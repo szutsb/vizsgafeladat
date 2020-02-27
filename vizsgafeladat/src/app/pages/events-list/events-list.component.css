@@ -1,0 +1,22 @@
+#events {
+    text-align: center;
+    color: #FFFF;
+    min-height: 100vh;
+}
+
+.eventLink {
+    color: #008060;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.eventLink:hover {
+    text-decoration: underline;
+}
+
+.event-body {
+    background-color: rgba(128, 0, 32, 0.4);
+    background-position: cover;
+    overflow: auto;
+    border-radius: 8px;
+}

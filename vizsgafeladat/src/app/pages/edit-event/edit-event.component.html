@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="row">
+        <h2>Program módosítása</h2>
+    </div>
+    <div class="row">
+        <form class="col-md-8" [formGroup]= "editForm" novalidate (ngSubmit)="updateEvent()">
+            <select formControlName="eventType" (change)="changeType($event)" class="custom-select">
+                <option>könyves</option>
+                <option>filmes</option>
+                <option>gamer</option>
+            </select>
+            <span class="text-danger small" *ngIf="editForm.get('eventType').hasError('required') && editForm.get('eventType').touched">  
+                Kérjük válassza ki a program típusát  
+            </span>
+            <div class="form-group">
+                <label for="imageURL">Kép elérési útvonala:</label>
+                <input type="text" class="form-control" formControlName="imageURL" #imageURL value="{{event.imageURL}}">
+            </div>
+            <div class="row">
+                <img [src]="imageURL.value" class="img-fluid">
+            </div>                    
+            <div class="form-group">
+                <label for="date">Dátum:</label>
+                <input type="date" class="form-control" formControlName="date" value="{{event.date}}">
+                <span class="text-danger small" *ngIf="editForm.get('date').hasError('required') && editForm.get('date').touched">  
+                    Kérjük töltse ki a dátum mezőt  
+                </span>  
+            </div>
+            <div class="form-group">
+                <label for="time">Időpont:</label>
+                <input type="time" class="form-control" formControlName="time" value="{{event.time}}">
+                <span class="text-danger small" *ngIf="editForm.get('time').hasError('required') && editForm.get('time').touched">  
+                    Kérjük töltse ki az időpont mezőt  
+                </span>     
+            </div>
+            <div class="form-group">
+                <label for="location">Helyszín:</label>
+                <input type="text" class="form-control" formControlName="location" value="{{event.location}}">
+                <span class="text-danger small" *ngIf="editForm.get('location').hasError('required') && editForm.get('location').touched">  
+                    Kérjük adja meg a program helyszínét  
+                </span>     
+            </div>
+            <div class="form-group">
+                <label for="text">Leírás:</label>
+                <textarea class="form-control" formControlName="text" rows="4" value="{{event.text}}"></textarea>
+                <span class="text-danger small" *ngIf="editForm.get('text').hasError('required') && editForm.get('text').touched">  
+                    Kérjük adja meg a program leírását
+                </span>
+                <span class="text-danger small" *ngIf="editForm.get('text').hasError('maxlength') && editForm.get('text').touched">  
+                    Kérjük legfeljebb 180 karaktert használjon
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="eventURL">Link a programhoz</label>
+                <input type="text" class="form-control" formControlName="eventURL" value="{{event.eventURL}}">
+            </div>
+            <button class="btn btn-add btn-block w-50 mx-auto" [disabled]="editForm.pristine" type="submit">Küldés</button>
+            <button class="btn btn-home btn-block w-50 mx-auto" type="button" (click)="goBack()">Vissza</button>
+        </form>
+    </div>
+</div>

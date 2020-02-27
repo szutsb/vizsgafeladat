@@ -1,0 +1,21 @@
+<section id="events">
+    <div class="pb-4"><h2>Programok a környéken</h2></div>
+    <div class="container">            
+        <div class="row" *ngIf="event; else noEvent">  
+            <div class="col-md-6 col-lg-4 p-4" *ngFor="let event of event">
+                <div class="event-body h-100 pb-3 m-2">
+                    <img *ngIf="event.imageURL" src="{{event.imageURL}}" alt="hoppá, itt egy képnek kellene látszani" class="img-fluid">
+                    <h4 class=""><strong>{{ event.eventType | uppercase }} program: {{ event.date }} {{ event.time }}:</strong></h4>  
+                    <p class="">{{ event.location }} <br> {{ event.text }}</p>
+                    <p class="text-warning" *ngIf="event.date == currentDate && event.time < currentTime"> <strong>Ez a program már elkezdődött!</strong> </p>
+                    <p class="text-danger" *ngIf="event.date < currentDate"> <strong>Ez a program már véget ért!</strong> </p>
+                    <a *ngIf="event.eventURL" class="eventLink" href="{{event.eventURL}}" target="_blank">Link az eseményhez</a>
+                </div>                
+            </div>                  
+        </div>
+        <ng-template #noEvent>
+            <h3 class="mx-auto">Jelenleg nincsenek programok</h3>
+        </ng-template>        
+    </div>
+</section>
+
